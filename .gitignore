@@ -1,0 +1,12 @@
+# Competitive Programming Helper
+**/.cph/
+
+# VS Code
+.vscode/
+
+# Windows executables
+*.exe
+
+# Object files
+*.o
+*.obj
