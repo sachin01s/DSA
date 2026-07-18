@@ -1,29 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define int long long
-
-signed main() {
-    int t;
+int main() {
+    long long t;
     cin >> t;
 
     while (t--) {
-        int n;
+        long long n;
         cin >> n;
 
-        vector<int> a(n);
+        vector<long long> a(n);
         for (int i = 0; i < n; i++)
             cin >> a[i];
 
         bool ok = true;
 
-        for (int i = 0; i < n - 1; i++) {
+        for (long long i = 0; i < n - 1; i++) {
             if (a[i] < i + 1) {
                 ok = false;
                 break;
             }
 
-            int extra = a[i] - (i + 1);
+            long long extra = a[i] - (i + 1);
             a[i] = i + 1;
             a[i + 1] += extra;
         }
@@ -31,7 +29,11 @@ signed main() {
         if (ok && a[n - 1] < n)
             ok = false;
 
-        cout << (ok ? "YES" : "NO") << '\n';
+        if(ok){
+            cout<<"Yes"<<endl;
+        }else{
+            cout<<"No"<<endl;
+        }
     }
 
     return 0;
