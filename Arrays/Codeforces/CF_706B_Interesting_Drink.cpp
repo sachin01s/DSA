@@ -15,11 +15,11 @@ int main(){
         int m;
         cin>>m;
         int l = 0;
-        int r = x.size();
-        while(l<r){
-            int mid = l+(r-l)/2;
+        int right = x.size();
+        while(l<right){
+            int mid = l+(right-l)/2;
             if(x[mid]>m){
-                r=mid;
+                right=mid;
             }
             else{
                 l=mid+1;
